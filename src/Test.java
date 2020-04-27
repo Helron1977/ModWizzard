@@ -3,6 +3,7 @@ public class Test {
 
     public Test() {
         ModLuaFile test = new ModLuaFile("Gallows", "Gallows.fbx");
+        BuildingLuaFile testedBuilding = new BuildingLuaFile("Gallows_01","GALLOWS_NAME", "GALLOWS_DESC","DECORATION");
         testModLuaLine01(test);
         testModLuaLine02(test);
         testModLuaLine03(test);
@@ -14,7 +15,20 @@ public class Test {
         testModLuaLine09(test);
         testModLuaLine10(test);
         testModLuaLine11(test);
+        //Begin of the BuildingLua Code test
+        testBuildingLuaBuildingRegisterBlock01(testedBuilding);
     }
+
+    private void testBuildingLuaBuildingRegisterBlock01(BuildingLuaFile testedBuilding) {
+        String wantedResult = "Gallows:register({ DataType = \"BUILDING\",\n" +
+                "Id = \"GALLOWS_01\",Name = \"GALLOWS_NAME\",Description = \"GALLOWS_DESC\",\n" +
+                "BuildingType = \"DECORATION\",";
+        String receivedResult = testedBuilding.createCode(testedBuilding);
+        if (!compareStrings(wantedResult,receivedResult))
+            System.out.println(receivedResult + wantedResult);
+        displayTest(compareStrings(wantedResult,receivedResult), "Test BuildingBlock01");
+    }
+
 
     private void testModLuaLine11(ModLuaFile test) {
         String wantedResult = "Gallows:dofile(\"scripts/buildings.lua\")" ;
