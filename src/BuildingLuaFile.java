@@ -1,3 +1,4 @@
+import java.lang.reflect.Field;
 import java.util.List;
 import java.util.Random;
 
@@ -29,7 +30,22 @@ public class BuildingLuaFile implements Params {
 
     public String createCode(BuildingLuaFile testBuilding) {
 
-        return null;
+        //String code = modName+":register({ "+DataType.
+        Field[] champs = BuildingLuaFile.class.getDeclaredFields();
+
+        // looking for the best way to do it ...
+
+        for (Field champ : champs) {
+            System.out.println(champ.getName());
+        }
+
+            //if (BuildingLuaFile.class.isAssignableFrom(champ.getType())) {
+              //  System.out.println(champ.getName());}}
+
+
+        return "Gallows:register({ DataType = \"BUILDING\",\n" +
+                "Id = \"GALLOWS_01\",Name = \"GALLOWS_NAME\",Description = \"GALLOWS_DESC\",\n" +
+                "BuildingType = \"DECORATION\",";
 
     }
 }
