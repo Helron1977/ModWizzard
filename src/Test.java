@@ -17,6 +17,8 @@ public class Test {
         testModLuaLine11(test);
         //Begin of the BuildingLua Code test
         CodeBuilder.createBuildingCode(testedBuilding);
+        //Begin of the BuildingLua Code test
+        CodeBuilder.createBuildingPartCode(new BuildingPart());
 
 
     }

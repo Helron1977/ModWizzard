@@ -1,4 +1,3 @@
-
 public class Building extends Project{
     String DataType = "BUILDING";
     String Id = "GALLOWS_01";//rendre aléatoire
