@@ -1,9 +1,9 @@
 public class Test {
 
 
-    public Test() {
+    public Test() throws IllegalAccessException {
         ModLuaFile test = new ModLuaFile("Gallows", "Gallows.fbx");
-        BuildingLuaFile testedBuilding = new BuildingLuaFile("Gallows_01","GALLOWS_NAME", "GALLOWS_DESC","DECORATION");
+        Building testedBuilding = new Building("Gallows", "Gallows.fbx","GALLOWS_01","GALLOWS_NAME", "GALLOWS_DESC","DECORATION");
         testModLuaLine01(test);
         testModLuaLine02(test);
         testModLuaLine03(test);
@@ -19,9 +19,11 @@ public class Test {
         testBuildingLuaBuildingRegisterBlock01(testedBuilding);
     }
 
-    private void testBuildingLuaBuildingRegisterBlock01(BuildingLuaFile testedBuilding) {
+    private void testBuildingLuaBuildingRegisterBlock01(Building testedBuilding) throws IllegalAccessException {
         String wantedResult = "Gallows:register({ DataType = \"BUILDING\",\n" +
-                "Id = \"GALLOWS_01\",Name = \"GALLOWS_NAME\",Description = \"GALLOWS_DESC\",\n" +
+                "Id = \"GALLOWS_01\",\n" +
+                "Name = \"GALLOWS_NAME\",\n" +
+                "Description = \"GALLOWS_DESC\",\n" +
                 "BuildingType = \"DECORATION\",";
         String receivedResult = testedBuilding.createCode(testedBuilding);
         if (!compareStrings(wantedResult,receivedResult))

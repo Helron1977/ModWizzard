@@ -1,9 +1,10 @@
-public class ModLuaFile {
+public class ModLuaFile{
     // this class exist to create  pre formated strings and return those string in a file name mod.lua
     String modName;
     String fbxName;
 
-    public ModLuaFile(String modName,String fbxName) {
+
+    public ModLuaFile(String modName, String fbxName) {
         this.modName = modName;
         this.fbxName = fbxName;
         displayCode();
