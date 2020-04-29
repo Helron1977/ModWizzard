@@ -3,7 +3,7 @@ public class Test {
 
     public Test() throws IllegalAccessException {
         ModLuaFile test = new ModLuaFile("Gallows", "Gallows.fbx");
-        Building testedBuilding = new Building("Gallows", "Gallows.fbx","GALLOWS_01","GALLOWS_NAME", "GALLOWS_DESC","DECORATION");
+        Building testedBuilding = new Building("Gallows", "Gallows.fbx","GALLOWS_01","GALLOWS_NAME", "GALLOWS_DESC","DECORATION",0,"GENERAL");
         testModLuaLine01(test);
         testModLuaLine02(test);
         testModLuaLine03(test);
@@ -16,20 +16,12 @@ public class Test {
         testModLuaLine10(test);
         testModLuaLine11(test);
         //Begin of the BuildingLua Code test
-        testBuildingLuaBuildingRegisterBlock01(testedBuilding);
+        CodeBuilder.createBuildingCode(testedBuilding);
+
+
     }
 
-    private void testBuildingLuaBuildingRegisterBlock01(Building testedBuilding) throws IllegalAccessException {
-        String wantedResult = "Gallows:register({ DataType = \"BUILDING\",\n" +
-                "Id = \"GALLOWS_01\",\n" +
-                "Name = \"GALLOWS_NAME\",\n" +
-                "Description = \"GALLOWS_DESC\",\n" +
-                "BuildingType = \"DECORATION\",";
-        String receivedResult = testedBuilding.createCode(testedBuilding);
-        if (!compareStrings(wantedResult,receivedResult))
-            System.out.println(receivedResult + wantedResult);
-        displayTest(compareStrings(wantedResult,receivedResult), "Test BuildingBlock01");
-    }
+
 
 
     private void testModLuaLine11(ModLuaFile test) {

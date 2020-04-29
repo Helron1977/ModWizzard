@@ -1,13 +1,8 @@
-public class ModLuaFile{
+public class ModLuaFile extends Project{
     // this class exist to create  pre formated strings and return those string in a file name mod.lua
-    String modName;
-    String fbxName;
-
 
     public ModLuaFile(String modName, String fbxName) {
-        this.modName = modName;
-        this.fbxName = fbxName;
-        displayCode();
+        super(modName, fbxName);
         createCode(modName,1);
         createCode(modName,2);
         createCode(modName,3);
@@ -20,6 +15,7 @@ public class ModLuaFile{
         createCode(modName,10);
         createCode(modName,11);
     }
+
 
     private void displayCode() {
         System.out.println(createCode(modName,1)

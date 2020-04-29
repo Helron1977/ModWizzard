@@ -1,9 +1,5 @@
-import java.lang.reflect.Field;
-import java.util.List;
-import java.util.Map;
 
-
-public class Building extends ModLuaFile{
+public class Building extends Project{
     String DataType = "BUILDING";
     String Id = "GALLOWS_01";//rendre aléatoire
     String Name = "string";
@@ -22,50 +18,19 @@ public class Building extends ModLuaFile{
     //List MaterialSetList ; //list<MATERIAL_SET>,//Optional
 
 
-    public Building(String modName, String fbxName,String id, String name, String description, String buildingType) {
+    //question to solve :How to create an object with a variable number of param in the constructor ?
+    //create a full constructor and init with default value
+    //create a full constructor and set a null value...
+    //if Default value or null value do not generate the code
+
+
+    public Building(String modName, String fbxName, String dataType, String id, String name, String description, int orderId, String buildingType) {
         super(modName, fbxName);
-        DataType = "BUILDING";
+        DataType = dataType;
         Id = id;
         Name = name;
         Description = description;
+        OrderId = orderId;
         BuildingType = buildingType;
-
     }
-    public String doubleQuotationMark( String strToQuote){
-        return "\""+strToQuote+"\"";
-    }
-
-    public String endOfLine(){
-        return ",\n";
-    }
-    public String equal(){
-        return " = ";
-    }
-
-    public String[][] params_Value(Building testBuilding){
-        Field[] params = Building.class.getDeclaredFields();
-        String[][] params_Value = new String[2][params.length];
-        for ( int j=0; j< params.length; j++)
-        {
-            params_Value[1][j]=params[j].getName();
-        }
-        System.out.println(params_Value[1][1]);//test
-        return params_Value;
-    }
-    public String createCode(Building testBuilding) throws IllegalAccessException {
-        Field[] params = Building.class.getDeclaredFields();
-
-        String code = modName+":register({" +params[0].getName()+equal()+doubleQuotationMark(DataType)+endOfLine()
-                +params[1].getName()+equal()+doubleQuotationMark(params[1].get(testBuilding).toString())+endOfLine() //ready to factorise
-                +params[2].getName()+equal()+doubleQuotationMark(Name)+endOfLine()
-                +params[3].getName()+equal()+doubleQuotationMark(Description)+endOfLine()
-                +params[4].getName()+equal()+doubleQuotationMark(BuildingType)+endOfLine();
-        System.out.println(code);
-        params_Value(testBuilding);
-
-
-        return code;
-
-    }
-
 }
