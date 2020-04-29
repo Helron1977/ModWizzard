@@ -1,5 +1,5 @@
 public class Project {
-    String modName;
+    public static  String modName;
     String fbxName;
 
     public Project(){
