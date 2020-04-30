@@ -4,6 +4,7 @@ public class Project {
     public String modName;
     public String fbxName;
 
+
     public Project(String modName, String fbxName) {
         this.modName = modName;
         this.fbxName = fbxName;
@@ -19,7 +20,6 @@ public class Project {
             +"--myMod:msgBox(\"Hello there! from "+modName+" mod!\")\n"
 
             +"-- Apply building asset processor\n"
-
 
             +":registerAssetProcessor(\"models/"+fbxName+"\", {\n"
 

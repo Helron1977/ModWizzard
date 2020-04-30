@@ -16,6 +16,11 @@ public class ProjectForm {
             public void actionPerformed(ActionEvent e) {
                 Project modUnderCons = new Project(ProjectField.getText(),FbxNameField.getText());
                 modUnderCons.createCode();
+                JFrame frame = new JFrame("Building Form");
+                frame.setContentPane((new BuildingForm(modUnderCons.modName).BuildingForm));
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.pack();
+                frame.setVisible(true);
             }
         });
     }

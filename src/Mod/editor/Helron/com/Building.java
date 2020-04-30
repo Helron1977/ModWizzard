@@ -19,11 +19,22 @@ public class Building {
     //List MaterialSetList ; //list<MATERIAL_SET>,//Optional
 
 
-    //question to solve :How to create an object with a variable number of param in the constructor ?
-    //create a full constructor and init with default value
-    //create a full constructor and set a null value...
-    //if Default value or null value do not generate the code
-
+    public Building(String dataType, String id, String name, String description, int orderId, String buildingType, String buildingModel, String villagerRequired, String desirabilityLayer, boolean isManuallyUnlocked, boolean isDestructible, boolean isEditable, boolean isHidden, boolean isClearTrees) {
+        DataType = dataType;
+        Id = id;
+        Name = name;
+        Description = description;
+        OrderId = orderId;
+        BuildingType = buildingType;
+        BuildingModel = buildingModel;
+        VillagerRequired = villagerRequired;
+        DesirabilityLayer = desirabilityLayer;
+        IsManuallyUnlocked = isManuallyUnlocked;
+        IsDestructible = isDestructible;
+        IsEditable = isEditable;
+        IsHidden = isHidden;
+        IsClearTrees = isClearTrees;
+    }
 
     public String getDataType() {
         return DataType;

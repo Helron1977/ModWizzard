@@ -12,11 +12,21 @@ public class BuildingForm {
     private JTextField textField2;
     private JComboBox comboBox1;
 
-    public BuildingForm() {
+    public BuildingForm(String modName) {
         nextButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(null,"Hello Helron");
+                Building BuildingUnderCons = new Building("Building","1","BUILDING_NAME","BUILDING_DESC",0, "GENERAL","","5","DESIRABILITY",true,true,true,false,true );
+                try {
+                    CodeBuilder.createBuildingCode(modName,BuildingUnderCons);
+                } catch (IllegalAccessException ex) {
+                    ex.printStackTrace();
+                }
+                JFrame buildingPart = new JFrame("BuildingPart Form");
+                buildingPart.setContentPane((new BuildingPartForm(modName).BuildingPartForm));
+                buildingPart.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                buildingPart.pack();
+                buildingPart.setVisible(true);
             }
         });
     }
