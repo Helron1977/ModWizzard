@@ -1,7 +1,9 @@
+package Mod.editor.Helron.com;
+
 import javax.swing.*;
 
 public class BuildingPartForm {
-    JPanel BuildingPartForm;
+    public JPanel BuildingPartForm;
     private JButton nextButton;
     private JTextField textField1;
     private JTextField textField2;
