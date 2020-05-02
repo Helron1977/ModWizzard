@@ -16,7 +16,7 @@ public class BuildingForm {
         nextButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Building BuildingUnderCons = new Building("Building","1","BUILDING_NAME","BUILDING_DESC",0, "GENERAL","","5","DESIRABILITY",true,true,true,false,true );
+                Building BuildingUnderCons = new Building("BUILDING","1","BUILDING_NAME","BUILDING_DESC",0, comboBox1.getSelectedItem().toString(),"","5","DESIRABILITY",true,true,true,false,true );
                 try {
                     CodeBuilder.createBuildingCode(modName,BuildingUnderCons);
                 } catch (IllegalAccessException ex) {

@@ -1,10 +1,14 @@
 package Mod.editor.Helron.com;
 
 import javax.swing.*;
+import javax.swing.event.HyperlinkEvent;
+import javax.swing.event.HyperlinkListener;
+import java.awt.*;
+import java.io.IOException;
 
 
 public class Main {
-    public static void main(String[] args) throws IllegalAccessException {
+    public static void main(String[] args) throws IllegalAccessException, IOException {
 
         try {
             for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
@@ -23,11 +27,11 @@ public class Main {
         }
 
         JFrame project = new JFrame("Project Form");
-        project.setContentPane((new ProjectForm().ProjectForm));
+        project.setContentPane((new ProjectForm(project).ProjectForm));
         project.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         project.pack();
         project.setVisible(true);
 
-
     }
+
 }
