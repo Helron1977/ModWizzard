@@ -45,18 +45,7 @@ public class ProjectForm {
         summary.setContentType("text/html");
         summary.setEditable(false);
         summary.setOpaque(false);
-        String data = "<div class=\"li\"><a href=\"https://www.polymorph.games/foundation/modding/start#welcome_to_the_foundation_modding_wiki\">Welcome to the Foundation Modding Wiki</a></div>\n" +
-                "<ul class=\"toc\">\n" +
-                "<li class=\"level2\"><div class=\"li\"><a href=\"#more_info_on\">More info on:</a></div></li>\n" +
-                "<li class=\"level2\"><div class=\"li\"><a href=\"#where_do_i_start\">Where do I start?</a></div></li>\n" +
-                "<li class=\"level2\"><div class=\"li\"><a href=\"#the_modjson_file\">The mod.json file</a></div></li>\n" +
-                "<li class=\"level2\"><div class=\"li\"><a href=\"#the_modlua_script\">The mod.lua script</a></div></li>\n" +
-                "<li class=\"level2\"><div class=\"li\"><a href=\"#including_other_lua_files\">Including other LUA files</a></div></li>\n" +
-                "<li class=\"level2\"><div class=\"li\"><a href=\"#enablingdisabling_a_mod\">Enabling / Disabling a mod</a></div></li>\n" +
-                "<li class=\"level2\"><div class=\"li\"><a href=\"#loggingdebugging\">Logging / Debugging</a></div></li>\n" +
-                "<li class=\"level2\"><div class=\"li\"><a href=\"#what_is_this_generated_idslua_file\">What is this generated_ids.lua file?</a></div></li>\n" +
-                "<li class=\"level2\"><div class=\"li\"><a href=\"#sharing_a_mod\">Sharing a mod</a></div></li>\n" +
-                "</ul></li>";
+        String data = "<ul><a href=\"/foundation/modding/start\"<img src=\"https://www.polymorph.games/foundation/modding/lib/tpl/dokuwiki/images/logo.png\"</ul> <li>Foundation - Modding Documentation</li>";
         summary.setText(data);
         HyperlinkListener listener = new HyperlinkListener() {
             @Override

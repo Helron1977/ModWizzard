@@ -8,7 +8,9 @@ import java.io.IOException;
 
 
 public class Main {
-    public static void main(String[] args) throws IllegalAccessException, IOException {
+    public static void main(String[] args) throws IllegalAccessException, IOException, ClassNotFoundException, InstantiationException {
+
+
 
         try {
             for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {

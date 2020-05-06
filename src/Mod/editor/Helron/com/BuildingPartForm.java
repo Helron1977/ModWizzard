@@ -9,7 +9,7 @@ public class BuildingPartForm {
     private JButton nextButton;
     private JTextField textField1;
     private JTextField textField2;
-    private JTextField textField3;
+    private JTextField categoryField;
     private JCheckBox checkBox1;
     private JSpinner spinner1;
 
@@ -17,6 +17,10 @@ public class BuildingPartForm {
         nextButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                BuildingPart.setId(modName.toUpperCase()+"_PART");
+                BuildingPart.setDescription(modName.toUpperCase()+"_DEC");
+                BuildingPart.setCategory(categoryField.getText());
+
 
             }
         });

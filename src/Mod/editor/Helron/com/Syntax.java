@@ -14,5 +14,6 @@ public class Syntax {
     public static String equal(){
         return " = ";
     }
+    public static String hook(String strToHook) { return "{ "+strToHook+"}";}
 
 }

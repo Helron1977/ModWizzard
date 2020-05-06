@@ -8,17 +8,17 @@ import java.awt.event.ActionListener;
 public class BuildingForm {
     JPanel BuildingForm;
     private JButton nextButton;
-    private JTextField textField1;
-    private JTextField textField2;
+    private JTextField buildingName;
+    private JTextField description;
     private JComboBox comboBox1;
 
     public BuildingForm(String modName) {
         nextButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Building BuildingUnderCons = new Building("BUILDING","1","BUILDING_NAME","BUILDING_DESC",0, comboBox1.getSelectedItem().toString(),"","5","DESIRABILITY",true,true,true,false,true );
+
                 try {
-                    CodeBuilder.createBuildingCode(modName,BuildingUnderCons);
+                    actionToDo(modName);
                 } catch (IllegalAccessException ex) {
                     ex.printStackTrace();
                 }
@@ -29,6 +29,29 @@ public class BuildingForm {
                 buildingPart.setVisible(true);
             }
         });
+    }
+
+    private void actionToDo(String modName) throws IllegalAccessException {
+        linkFieldtoParams(modName);
+        CodeBuilder.createBuildingCode(modName);
+
+    }
+
+    private void linkFieldtoParams(String modName) {
+
+        Building.setId(modName+"_01");
+        Building.setBuildingPartSetList(
+                "\n "+Syntax.hook(
+                        Syntax.hook(
+                                "\n\tName"+Syntax.equal()+Syntax.doubleQuotationMark(modName.toUpperCase()+"_NAME")+Syntax.endOfLine()
+                                +"\tBuildingPartList"+Syntax.equal()+Syntax.hook(Syntax.doubleQuotationMark(modName.toUpperCase()+"_PART"))+"\n"
+                        )
+
+                )
+
+        );
+
+
     }
 
 
