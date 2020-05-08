@@ -21,4 +21,24 @@ public class Building {
     boolean isClearTrees = false; //default: false
     // ArrayList<MaterialSet> materialSetArrayList; //Optional underConstruction
 
+
+    public Building(String dataType, String id, String name, String description, int orderId, String buildingType,
+                    ArrayList<BuildingPartSet> buildingPartSetArrayList, String buildingModel, ArrayList<VillagerStatusQuantityPair> villagerRequired, String desirabilityLayer,
+                    boolean isManuallyUnlocked, boolean isDestructible, boolean isEditable, boolean isHidden, boolean isClearTrees) {
+        this.dataType = dataType;
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.orderId = orderId;
+        this.buildingType = buildingType;
+        this.buildingPartSetArrayList = buildingPartSetArrayList;
+        this.buildingModel = buildingModel;
+        this.villagerRequired = villagerRequired;
+        this.desirabilityLayer = desirabilityLayer;
+        this.isManuallyUnlocked = isManuallyUnlocked;
+        this.isDestructible = isDestructible;
+        this.isEditable = isEditable;
+        this.isHidden = isHidden;
+        this.isClearTrees = isClearTrees;
+    }
 }
