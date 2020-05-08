@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Mod.editor.Helron.com.IHM.BuildingForm">
+  <grid id="27dc6" binding="buildingform" layout-manager="GridLayoutManager" row-count="7" column-count="8" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="10" left="10" bottom="10" right="10"/>
+    <constraints>
+      <xy x="20" y="20" width="866" height="400"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <component id="f15fa" class="javax.swing.JLabel" binding="nameLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <labelFor value="52d85"/>
+          <text value="Name"/>
+        </properties>
+      </component>
+      <component id="52d85" class="javax.swing.JTextField" binding="name">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="7147f" class="javax.swing.JTextField" binding="description">
+        <constraints>
+          <grid row="0" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="c17f7" class="javax.swing.JLabel" binding="descLabel">
+        <constraints>
+          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <labelFor value="7147f"/>
+          <text value="Description"/>
+        </properties>
+      </component>
+      <component id="9975" class="javax.swing.JLabel" binding="orderIdLabel">
+        <constraints>
+          <grid row="0" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <labelFor value="f9740"/>
+          <text value="OrderId"/>
+        </properties>
+      </component>
+      <component id="f9740" class="javax.swing.JTextField" binding="orderId">
+        <constraints>
+          <grid row="0" column="6" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="ebb30" class="javax.swing.JLabel" binding="buildingPartSetListLabel">
+        <constraints>
+          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="List of BuildingPart Sets"/>
+          <toolTipText value="define a Set of BUILDING_PART"/>
+        </properties>
+      </component>
+      <component id="57004" class="javax.swing.JList" binding="BuildingPartSetList">
+        <constraints>
+          <grid row="2" column="3" row-span="3" col-span="2" vsize-policy="6" hsize-policy="2" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="50"/>
+          </grid>
+        </constraints>
+        <properties>
+          <model>
+            <item value="Test"/>
+            <item value="Test1"/>
+          </model>
+        </properties>
+      </component>
+      <component id="587cb" class="javax.swing.JComboBox" binding="BuildingTypeComboBox">
+        <constraints>
+          <grid row="2" column="1" row-span="3" col-span="1" vsize-policy="0" hsize-policy="2" anchor="9" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="d256" class="javax.swing.JLabel" binding="BuildingModelLabel">
+        <constraints>
+          <grid row="2" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <labelFor value="21aff"/>
+          <text value="PREFAB"/>
+        </properties>
+      </component>
+      <component id="21aff" class="javax.swing.JTextField" binding="buildingModel">
+        <constraints>
+          <grid row="2" column="6" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="22101" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="3" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="VIllagerRequired"/>
+        </properties>
+      </component>
+      <component id="1db86" class="javax.swing.JList" binding="VillagerRequiredList">
+        <constraints>
+          <grid row="3" column="6" row-span="2" col-span="2" vsize-policy="6" hsize-policy="2" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="50"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="7c0a5" class="javax.swing.JButton" binding="button1" default-binding="true">
+        <constraints>
+          <grid row="4" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="5" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="+"/>
+        </properties>
+      </component>
+      <component id="741a9" class="javax.swing.JLabel" binding="desirabilityLabel">
+        <constraints>
+          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <labelFor value="aa737"/>
+          <text value="Desirability"/>
+        </properties>
+      </component>
+      <component id="aa737" class="javax.swing.JComboBox" binding="desirabilityComboBox">
+        <constraints>
+          <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="d963d" class="javax.swing.JCheckBox" binding="isManuallyUnlockedBox">
+        <constraints>
+          <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="IsManuallyUnlocked"/>
+        </properties>
+      </component>
+      <component id="2581b" class="javax.swing.JCheckBox" binding="isDestructibleBox">
+        <constraints>
+          <grid row="6" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="IsDestructible"/>
+        </properties>
+      </component>
+      <component id="79bd" class="javax.swing.JCheckBox" binding="isEditableBox">
+        <constraints>
+          <grid row="6" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="IsEditable"/>
+        </properties>
+      </component>
+      <component id="a9071" class="javax.swing.JCheckBox" binding="isHiddenBox">
+        <constraints>
+          <grid row="6" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="IsHidden"/>
+        </properties>
+      </component>
+      <component id="111fb" class="javax.swing.JCheckBox" binding="isClearTreesBox">
+        <constraints>
+          <grid row="6" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="IsClearTrees"/>
+        </properties>
+      </component>
+      <component id="5ac2" class="javax.swing.JButton" binding="BuildingPartSetAddButton">
+        <constraints>
+          <grid row="3" column="2" row-span="2" col-span="1" vsize-policy="0" hsize-policy="3" anchor="5" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="+"/>
+        </properties>
+      </component>
+      <vspacer id="c7aa2">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="8" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+            <minimum-size width="10" height="10"/>
+          </grid>
+        </constraints>
+      </vspacer>
+      <vspacer id="9fb8a">
+        <constraints>
+          <grid row="5" column="0" row-span="1" col-span="8" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+            <minimum-size width="10" height="10"/>
+          </grid>
+        </constraints>
+      </vspacer>
+      <component id="d26e7" class="javax.swing.JLabel" binding="buildingTypeLabel">
+        <constraints>
+          <grid row="2" column="0" row-span="3" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="3" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <labelFor value="587cb"/>
+          <text value="BuildingType"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>

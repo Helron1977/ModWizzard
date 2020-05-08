@@ -1,0 +1,10 @@
+package Mod.editor.Helron.com.API;
+
+public enum BuildingConstructor {
+    BUILDING_CONSTRUCTOR_RANDOM,
+    BUILDING_CONSTRUCTOR_DEFAULT,
+    BUILDING_CONSTRUCTOR_RANDOM_PART,
+    BUILDING_CONSTRUCTOR_BRIDGE,
+    BUILDING_CONSTRUCTOR_ASSEMBLAGE;
+    boolean isPreviewGroundVisible;
+}

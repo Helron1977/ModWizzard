@@ -1,9 +1,9 @@
 package Mod.editor.Helron.com;
 
+import Mod.editor.Helron.com.IHM.ProjectForm;
+
 import javax.swing.*;
-import javax.swing.event.HyperlinkEvent;
-import javax.swing.event.HyperlinkListener;
-import java.awt.*;
+
 import java.io.IOException;
 
 
@@ -11,7 +11,7 @@ public class Main {
     public static void main(String[] args) throws IllegalAccessException, IOException, ClassNotFoundException, InstantiationException {
 
 
-
+// launcg the first panel project form.
         try {
             for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {

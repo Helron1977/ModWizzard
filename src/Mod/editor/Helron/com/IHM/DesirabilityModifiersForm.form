@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Mod.editor.Helron.com.IHM.DesirabilityModifiersForm">
+  <grid id="27dc6" layout-manager="GridLayoutManager" row-count="1" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="10" left="10" bottom="10" right="10"/>
+    <constraints>
+      <xy x="20" y="20" width="500" height="400"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <component id="f825d" class="javax.swing.JLabel" binding="desirabilityLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <labelFor value="ce394"/>
+          <text value="Desirability"/>
+        </properties>
+      </component>
+      <component id="ce394" class="javax.swing.JComboBox" binding="desirabilitycomboBox">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <model>
+            <item value="DESIRABILITY_FERTILITY"/>
+            <item value="DESIRABILITY_IRON_ORE"/>
+            <item value="DESIRABILITY_RESIDENTIAL"/>
+          </model>
+        </properties>
+      </component>
+      <component id="6d674" class="javax.swing.JLabel" binding="typeLabel">
+        <constraints>
+          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <labelFor value="12412"/>
+          <text value="Type"/>
+        </properties>
+      </component>
+      <component id="12412" class="javax.swing.JComboBox" binding="typeComboBox">
+        <constraints>
+          <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <model>
+            <item value="ADD"/>
+            <item value="SUBSTRACT"/>
+            <item value="MULTIPLY_POSITIVE"/>
+            <item value="MULTIPLY_NEGATIVE"/>
+            <item value="NULLIFY"/>
+          </model>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
